@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Базовый CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.section {
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	padding: 0 25px;
+}
+
+.header {
+	background-color: #fefbfb;
+	border-bottom: 1px solid #b7b7b7;
+}
+
+.header__content {
+	padding: 10px 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__burger {
+	/* display: none; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 6px;
+	width: 40px;
+	cursor: pointer;
+	z-index: 1001;
+}
+
+.header__burger span {
+	display: block;
+	height: 4px;
+	width: 100%;
+	/* margin-bottom: 6px; */
+	background-color: #000;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+.description {
+	background-color: #1e1e1e;
+}
+
+.description__content {
+	padding: 25px 0;
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.description__content h1 {
+	font-size: 28px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.main {
+	margin: 50px 0;
+}
+
+.main__content {
+	display: flex;
+	/* justify-content: space-between; */
+}
+
+.main__filters {
+	/* border: 2px solid #918b8b; */
+	border: 2px solid #1e1e1e;
+	border-radius: 10px;
+	height: fit-content;
+}
+
+.filters {
+	/* width: fit-content; */
+	margin: 15px 15px;
+	width: 200px;
+}
+
+.filters__title {
+	/* font-size: 18px; */
+	display: block;
+	margin-bottom: 5px;
+}
+
+.filters__item {
+	display: flex;
+	/* align-items: center; */
+	/* gap: 10px; */
+}
+
+.filters__item input {
+	width: 16px;
+	height: 16px;
+	/* outline: #1e1e1e; */
+	border: 2px solid #1e1e1e;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.filters__item label {
+	font-weight: 300;
+	font-size: 16px;
+	cursor: pointer;
+	padding-left: 10px;
+}
+
+.main__showcase {
+	width: 100%;
+	margin-left: 20px;
+}
+
+.main__search {
+	width: 534px;
+	height: 37px;
+	border: 2px solid #1e1e1e;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-weight: 400;
+}
+
+.main__search input {
+	width: 100%;
+}
+
+.main__projects {
+	/* width: 100%; */
+	margin: 25px 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	/* justify-content: space-between; */
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	width: 255px;
+	height: 135px;
+	/* height: fit-content; */
+	border: 1.5px solid #1e1e1e;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.project__title {
+	line-height: 1.25;
+}
+
+.project__description {
+	margin-top: auto;
+	position: relative;
+}
+
+/* .project:hover .project__description {
+	text-decoration: underline;
+} */
+
+/* Псевдоэлемент для подчеркивания */
+.project__description::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1.5px;
+	background-color: #000; /* цвет подчеркивания */
+	transition: width 0.4s ease; /* плавный переход ширины */
+}
+
+/* При наведении на проект */
+.project:hover .project__description::before {
+	width: 87px; /* при наведении подчеркивание растягивается */
+}
+
+/* .project:hover p {
+	color: #000; /* Цвет текста при наведении (по желанию) */
+/* } */
+
+.main__pagination {
+	/* margin-top: 30px; */
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.pagination__elem {
+	border: 1.5px solid #1e1e1e;
+	border-radius: 5px;
+	padding: 2px 9px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.pagination__elem:hover {
+	opacity: 0.8;
+}
+
+.pagination__elem.checked {
+	opacity: 1;
+}
+
+.pagination__arrow {
+	cursor: pointer;
+}
+
+.footer {
+	background-color: #1e1e1e;
+}
+
+.footer__content {
+	width: 75%;
+	margin: 0 auto;
+	padding: 45px 0;
+}
+
+.footer__title {
+	font-size: 24px;
+	font-weight: 600;
+	color: #ffffff;
+}
+
+.footer__grid {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.footer__row {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer__links {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.footer__link {
+	/* font-size: 20px; */
+	display: block;
+	font-weight: 400;
+	color: #ffffff;
+}
