@@ -159,6 +159,7 @@ table {
 	border: 2px solid #1e1e1e;
 	margin-top: 3px;
 	cursor: pointer;
+	flex-shrink: 0;
 }
 
 .filters__item label {
