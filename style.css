@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Базовый CSS Reset */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Montserrat', sans-serif;
+	color: #f0f0f0;
 }
 
 html,
@@ -96,7 +99,7 @@ table {
 }
 
 .description {
-	background-color: #1e1e1e;
+	background-color: #2e2e2e;
 }
 
 .description__content {
@@ -108,12 +111,13 @@ table {
 
 .description__content h1 {
 	font-size: 28px;
-	font-weight: 300;
-	color: #fff;
+	font-weight: 600;
+	color: #f0f0f0;
 }
 
 .main {
-	margin: 50px 0;
+	padding: 50px 0;
+	background-color: #3a3a3a;
 }
 
 .main__content {
@@ -123,7 +127,8 @@ table {
 
 .main__filters {
 	/* border: 2px solid #918b8b; */
-	border: 2px solid #1e1e1e;
+	background-color: #2e2e2e;
+	/* border: 5px solid #1e1e1e; */
 	border-radius: 10px;
 	height: fit-content;
 }
@@ -138,6 +143,7 @@ table {
 	/* font-size: 18px; */
 	display: block;
 	margin-bottom: 5px;
+	font-weight: 600;
 }
 
 .filters__item {
@@ -156,8 +162,7 @@ table {
 }
 
 .filters__item label {
-	font-weight: 300;
-	font-size: 16px;
+	/* font-weight: 300; */
 	cursor: pointer;
 	padding-left: 10px;
 }
@@ -168,16 +173,25 @@ table {
 }
 
 .main__search {
+	display: flex;
+	align-items: center;
 	width: 534px;
-	height: 37px;
-	border: 2px solid #1e1e1e;
-	border-radius: 10px;
-	padding: 5px 10px;
-	font-weight: 400;
+	height: 55px;
+	background-color: #2e2e2e;
+	/* border: 2px solid #1e1e1e; */
+	border-radius: 17px;
+	/* padding: 5px 10px; */
+	padding: 16px;
+	font-weight: 600;
 }
 
 .main__search input {
 	width: 100%;
+}
+
+.main__search-icon-left {
+	opacity: 0.7;
+	margin-right: 10px;
 }
 
 .main__projects {
@@ -195,7 +209,8 @@ table {
 	width: 255px;
 	height: 135px;
 	/* height: fit-content; */
-	border: 1.5px solid #1e1e1e;
+	background-color: #252525;
+	/* border: 1.5px solid #1e1e1e; */
 	border-radius: 5px;
 	padding: 5px 10px;
 	cursor: pointer;
@@ -222,13 +237,13 @@ table {
 	left: 0;
 	width: 0;
 	height: 1.5px;
-	background-color: #000; /* цвет подчеркивания */
+	background-color: #f0f0f0; /* цвет подчеркивания */
 	transition: width 0.4s ease; /* плавный переход ширины */
 }
 
 /* При наведении на проект */
 .project:hover .project__description::before {
-	width: 87px; /* при наведении подчеркивание растягивается */
+	width: 93px; /* при наведении подчеркивание растягивается */
 }
 
 /* .project:hover p {
@@ -243,16 +258,22 @@ table {
 }
 
 .pagination__elem {
-	border: 1.5px solid #1e1e1e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	background-color: #252525;
+	/* border: 1.5px solid #1e1e1e; */
 	border-radius: 5px;
-	padding: 2px 9px;
+	/* padding: 2px 9px; */
 	cursor: pointer;
 	opacity: 0.5;
 	transition: opacity 0.3s ease-in-out;
 }
 
 .pagination__elem:hover {
-	opacity: 0.8;
+	opacity: 0.85;
 }
 
 .pagination__elem.checked {
